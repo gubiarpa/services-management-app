@@ -1,3 +1,3 @@
-export const ReceiptPage = () => {
+export const PageReceipt = () => {
 	return <div>Contenido de Recibos</div>;
 };

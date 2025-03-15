@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { MainNavbar } from '../components/MainNavbar';
-import { HomePage, ReceiptPage, ServicePage } from '../pages';
+import { HomePage, PageAccount, PageReceipt, ServicePage } from '../pages';
 
 export const DashboardRoutes = () => {
 	return (
@@ -18,7 +18,11 @@ export const DashboardRoutes = () => {
 					/>
 					<Route
 						path='/receipts'
-						element={<ReceiptPage />}
+						element={<PageReceipt />}
+					/>
+					<Route
+						path='/account'
+						element={<PageAccount />}
 					/>
 				</Routes>
 			</div>

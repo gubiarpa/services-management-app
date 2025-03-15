@@ -14,8 +14,6 @@ export const MainNavbar = () => {
 		<Navbar
 			expand='lg'
 			className='bg-body-tertiary'
-			bg='dark'
-			data-bs-theme='dark'
 		>
 			<Container>
 				<Link
@@ -42,6 +40,12 @@ export const MainNavbar = () => {
 							to='/receipts'
 						>
 							Recibos
+						</NavLink>
+						<NavLink
+							className='nav-item nav-link'
+							to='/account'
+						>
+							Cuenta
 						</NavLink>
 					</Nav>
 					<Form>
