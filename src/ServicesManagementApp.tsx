@@ -1,7 +1,9 @@
+import { AppRouter } from './routers/AppRouter';
+
 export function ServicesManagementApp() {
 	return (
 		<>
-			<h1>Service Management</h1>
+			<AppRouter />
 		</>
 	);
 }
