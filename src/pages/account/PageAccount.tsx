@@ -10,10 +10,7 @@ import { GoKey } from 'react-icons/go';
 import { IoShieldCheckmarkOutline } from 'react-icons/io5';
 
 export const PageAccount = () => {
-	const accountQuery = useAccount();
-
-	const isLoading = accountQuery.isLoading;
-	const isError = accountQuery.isError;
+	const { isLoading, isError, data } = useAccount();
 
 	if (isLoading) {
 		return <div>Loading...</div>;
@@ -23,7 +20,7 @@ export const PageAccount = () => {
 		return <div>Error</div>;
 	}
 
-	const account = accountQuery.data as Account;
+	const account = data as Account;
 
 	return (
 		<Form className='mt-3'>
@@ -104,7 +101,7 @@ export const PageAccount = () => {
 			>
 				<Form.Label className='ms-2'>
 					<IoHomeOutline style={{ marginBottom: '0.2rem', marginRight: '0.5rem' }} />
-					Domicilios
+					Domicilio{account.buildings.length > 1 && 's'}
 				</Form.Label>
 				<ListGroup>
 					{account.buildings.map((building, index) => (

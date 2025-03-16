@@ -21,8 +21,8 @@ export interface Account {
 export interface AccountResponse {
 	_id: string;
 	fullname: string;
-	phone: string;
-	email: string;
+	phone: AccountPhone;
+	email: AccountEmail;
 	roles: string[];
 	active: boolean;
 	buildings: string[];
